@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="with=device-width, initial-scale=1.0">
+        <title>Live Weather App</title>
+        <link rel="stylesheet" href="lwa.css">
+        <script src="lwa.js" defer></script>
+    </head>
+    <body>
+        <main>
+            <section id="home-screen">
+                <div class="app-container">
+                    <div class="weather-icon">
+                        <img src="Weather.png" alt="Weather icon">   
+                    </div>
+                    <h1>LIVE WEATHER APP</h1>
+                    <p>Get real-time weather updates <br> anywhere in the world.</p>
+                    <button id="go-to-search-btn" class="search-btn">
+                        Search any city
+                    </button>
+                    <p class="or">OR</p>
+                    <button id="location-btn" class="location-btn">
+                        Use Current Location
+                    </button>
+                </div>
+            </section>
+            <section id="search-screen">
+                <div class="app-container">
+                    <h2>Live Weather</h2>
+                    <h1> Search for a city</h1>
+                    <div class="search-area">
+                        <input type="text" id="city-search-input" placeholder="Enter city name...">
+                        <button id="search-city-btn"> Search </button>
+                    </div>
+                    <h2>Recent/Favorites</h2>
+                    <div id="location-list" class="location-list">
+                    </div>
+                    <button id="search-back-btn">Back</button>
+                </div>
+            </section>
+            <section id="error-screen">
+                <div class="error-container">
+                    <div class="error icon">
+                        <img src="Error.png" alt="Error icon">
+                    </div>
+                    <h1>Oops! We couldn't find that city.</h1>
+                    <p>City not found or unable to fetch weather data.</p>
+                    <button id="retry-btn" class="retry-btn"> Retry </button>
+                </div>
+            </section>
+            <section id="result-screen">
+                <div class="result-container">
+                    <h2>LIVE WEATHER APP</h2>
+                    <h1 id="result-city"></h1>
+                    <div class="current-weather">
+                        <div id="current-weather-icon"></div>
+                        <div id="current-temperature"></div>
+                    </div>
+                    <p id="weather-condition"></p>
+                    <div class="weather-details">
+                        <div class="weather-detail">
+                            <div class="detail-icon"> <img src="Humidity.png" alt="Humidity icon"></div>
+                            <p>Humidity</p>
+                            <span id="humidity-value"></span>
+                        </div>
+                        <div class="weather-detail">
+                            <div class="detail-icon"> <img src="Wind.png" alt="Wind icon"></div>
+                            <p>Wind speed</p>
+                            <span id="wind-speed-value"></span>
+                        </div>
+                        <div class="weather-detail">
+                            <div class="detail-icon"> <img src="Rainfall.png" alt="Rainfall icon"></div>
+                            <p>Rain probability</p>
+                            <span id="rain-probability-value"></span>
+                        </div>
+                    </div>
+                    <h2> 7-Day Forecast </h2>
+                    <div id="forecast-container" class="forecast-container">
+                    </div>
+                    <div class="temperature-section">
+                        <p>Temperature Unit</p>
+                        <button id="celsius-btn" class="unit-btn">°C</button>
+                        <button id="fahrenheit-btn" class="unit-btn">°F</button>
+                    </div>
+                    <div class="result-actions">
+                        <button id="save-favorite-btn" class="save-favorite-btn"> Save Favorite</button>
+                        <button id="result-search-another-city-btn" class="search-another-city-btn">Search Another City</button>
+                    </div>
+                </div>
+            </section>  
+        </main>
+    </body>
+</html>
